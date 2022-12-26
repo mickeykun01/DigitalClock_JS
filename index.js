@@ -6,7 +6,9 @@ function clock (){
 
     let meridian;
     if(hours > 12){
-        meridian = "PM";
+        if(hours >= 12){
+            meridian = "PM";
+        }
         hours -= 12;
         console.log(meridian);
     }
@@ -81,6 +83,13 @@ function setAlarm(){
         document.getElementById("grab").innerText = "CLOSE YOUR EYES AND GO TO SLEEP"
 
     }
+
+    // if(wake == lunch){
+    //     document.getElementById("font").innerText = "GOOD MORNING!! WAKE UP !! "
+    //     document.getElementById("imgM").src = "./morningimg.svg"
+    //     document.getElementById("imgM").style.borderRadius = "5px"
+    //     document.getElementById("grab").innerText = "GRAB SOME HEALTHY BREAKFAST!!! "
+    // }
 
     function wakeHour(){
         let afterW = parseInt(wake) + 1;
